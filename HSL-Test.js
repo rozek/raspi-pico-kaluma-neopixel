@@ -130,8 +130,6 @@ let Display = SPIDisplay(null, 16,16);
   Display.clear();
 
   for (let i = 0; i < 16; i++) {
-    for (let j = 0; j < 16; j++) {
-      Display.setPixelHSL(i,j, i/16,1,1/64);
-    }
+    Display.setPixelHSL(i,0, i/16,1,1/64);
   }
 Display.show();
