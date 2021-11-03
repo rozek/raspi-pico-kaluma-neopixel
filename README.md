@@ -51,8 +51,8 @@ The output of this function is an object containing a few methods which may be u
 
 The following tests assume a LED string connected to Pin 19. Just copy them into your clipboard, paste them into the Kaluma Web IDE and "Upload":
 
-* **`RGB-Test.js`**
-* **`HSL-Test.js`**
+* **`RGB-Test.js`**<br>sets pixel 0 to red, pixel 2 to green, 4 to blue and pixel 10 to yellow, 12 to magenta, 14 to cyan
+* **`HSL-Test.js`**<br>fills pixels 0...15 with different colors
 
 All examples assume a 16x16 RGB LED matrix connected to Pin 19. Just copy them into your clipboard, paste them into the Kaluma Web IDE and "Upload":
 
