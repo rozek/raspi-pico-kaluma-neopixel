@@ -32,10 +32,23 @@ The library directly supports linear stripes as well as matrices wired in zigzag
 
 ## API ##
 
+The "library" consists of a single function `SPIDisplay` which should be invoked to setup a driver for a given MOSI pin and LED geometry: 
+
+* **`SPIDisplay (Pin, Width, Height)`**<br>
+
+The output of this function is an object containing a few methods which may be used to prepare a display and send it to the LED stripe.
+
+* **`clear ()`**<br>
+* **`setPixelRGB (x,y, R,G,B)`**<br>
+* **`setPixelHSL (x,y, H,S,L)`**<br>
+* **`HSLtoRGB (H,S,L)`**<br>
+* **`show ()`**<br>
 
 
 ## Usage ##
 
+
+## Examples ##
 
 
 ## License ##
