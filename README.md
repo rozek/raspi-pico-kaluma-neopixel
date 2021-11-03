@@ -16,11 +16,11 @@ This code uses the first of the "Serial Programming Interfaces" (SPI) the Raspi 
 
 From the possible signals an SPI provides, only "Master Out Slave In" (MOSI) is used. The Raspi Pico allows that signal to be routed to multiple output pins (but not to _any_ of them): in this example, pin 19 has been chosen - others may work as well, but you will have to test yourself.
 
-#### Connecting an LED Stripe ####
+#### Connecting a LED Stripe ####
 
 Sometimes, LED stripes (which assume to be powered with 5V) may be directly wired to the Raspi Pico output pin (which provides 3v3 levels only) but usually, such a connection does not work reliably and may produce wrong LED patterns from time to time.
 
-In such a case, a level shifter should be inserted between Raspi Pi and LED Stripe. This device does not have to be bidirectional but definitely must be fast since communication effectively runs with 800kHz. For that reason, a dedicated level shifting chip should be used (instead of the brilliant and, thus, widely used circuit consisting of a simple MOSFET and two resistors only). If it still has to be the latter one, you may try to "shorten" the MOSFET with a small ceramic capacitor (e.g., 22pF) but success is not guaranteed.
+In such a case, a level shifter should be inserted between Raspi Pico and LED Stripe. This device does not have to be bidirectional but definitely must be fast since communication effectively runs with 800kHz. For that reason, a dedicated level shifting chip should be used (instead of the brilliant and, thus, widely used circuit consisting of a simple MOSFET and two resistors only). If it still has to be the latter one, you may try to "short-circuit" the MOSFET with a small ceramic capacitor (e.g., 22pF) but success is not guaranteed.
 
 #### Memory Consumption ####
 
@@ -34,23 +34,32 @@ The library directly supports linear stripes as well as matrices wired in zigzag
 
 The "library" consists of a single function `SPIDisplay` which should be invoked to setup a driver for a given MOSI pin and LED geometry: 
 
-* **`SPIDisplay (Pin, Width, Height)`**<br>
+* **`SPIDisplay (Pin, Width, Height)`**<br>prepares an internal display storage for a LED matrix with the given dimension (omit `Height` if you have a linear stripe only) which is connected to the given `Pin` (set `Pin` to `null` if you want to use the default)
 
 The output of this function is an object containing a few methods which may be used to prepare a display and send it to the LED stripe.
 
-* **`clear ()`**<br>
-* **`setPixelRGB (x,y, R,G,B)`**<br>
-* **`setPixelHSL (x,y, H,S,L)`**<br>
-* **`HSLtoRGB (H,S,L)`**<br>
-* **`show ()`**<br>
-
+* **`clear ()`**<br>fills the internal display storage with the SPI bit pattern for dark LEDs
+* **`setPixelRGB (x,y, R,G,B)`**<br>sets the LED at the given coordinate (`x = 0...Width-1, y = 0...Height-1`) to the given RGB values (`R = 0...255, G = 0...255, B = 0...255`)
+* **`setPixelHSL (x,y, H,S,L)`**<br>sets the LED at the given coordinate (`x = 0...Width-1, y = 0...Height-1`) to RGB values which correspond to the given "Hue" (`H = 0...1`), "Saturation" (`S = 0...1`) and "Luminosity" (`L = 0...1`) values. Internally, this method uses the same conversion as `HSLtoRGB` and has been provided for your convenience only
+* **`HSLtoRGB (H,S,L)`**<br>converts the given "Hue" (`H = 0...1`), "Saturation" (`S = 0...1`) and "Luminosity" (`L = 0...1`) values to corresponding RGB values (`R = 0...255, G = 0...255, B = 0...255`) and returns them as an array. The same conversion is also used by `setPixelHSL`, but has been provided as a separate method in case that you want to process the resulting RGB values further
+* **`show ()`**<br>sends the current contents of the internal display storage to the connected LED stripe
 
 ## Usage ##
 
 
-## Examples ##
+## Tests and Examples ##
 
-All examples assume a 16x16 RGB LED matrix connected to Pin 19:
+The following tests assume a LED string connected to Pin 19. Just copy them into your clipboard, paste them into the Kaluma Web IDE and "Upload":
+
+* **`RGB-Test.js`**<br>sets pixel 0 to red, pixel 2 to green, 4 to blue and pixel 10 to yellow, 12 to magenta, 14 to cyan
+* **`HSL-Test.js`**<br>fills pixels 0...15 with different colors
+
+All examples assume a 16x16 RGB LED matrix connected to Pin 19. Just copy them into your clipboard, paste them into the Kaluma Web IDE and "Upload":
+
+* **`Intensity-Test-linear-non-dimmed.js`**
+* **`Intensity-Test-linear-dimmed.js`**
+* **`Intensity-Test-non-linear-non-dimmed.js`**
+* **`Intensity-Test-non-linear-dimmed.js`**
 
 ## License ##
 
