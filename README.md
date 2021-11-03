@@ -48,9 +48,19 @@ The output of this function is an object containing a few methods which may be u
 ## Usage ##
 
 
-## Examples ##
+## Tests and Examples ##
 
-All examples assume a 16x16 RGB LED matrix connected to Pin 19:
+The following tests assume a LED string connected to Pin 19. Just copy them into your clipboard, paste them into the Kaluma Web IDE and "Upload":
+
+* **`RGB-Test.js`**
+* **`HSL-Test.js`**
+
+All examples assume a 16x16 RGB LED matrix connected to Pin 19. Just copy them into your clipboard, paste them into the Kaluma Web IDE and "Upload":
+
+* **`Intensity-Test-linear-non-dimmed.js`**
+* **`Intensity-Test-linear-dimmed.js`**
+* **`Intensity-Test-non-linear-non-dimmed.js`**
+* **`Intensity-Test-non-linear-dimmed.js`**
 
 ## License ##
 
