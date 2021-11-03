@@ -56,10 +56,10 @@ The following tests assume a LED string connected to Pin 19. Just copy them into
 
 All examples assume a 16x16 RGB LED matrix connected to Pin 19. Just copy them into your clipboard, paste them into the Kaluma Web IDE and "Upload":
 
-* **`Intensity-Test-linear-non-dimmed.js`**
-* **`Intensity-Test-linear-dimmed.js`**
-* **`Intensity-Test-non-linear-non-dimmed.js`**
-* **`Intensity-Test-non-linear-dimmed.js`**
+* **`Intensity-Test-linear-non-dimmed.js`**<br>fills a 16x16 LED matrix with a variety of colors and a linearly increasing intensity ranging from 0 to maximum
+* **`Intensity-Test-linear-dimmed.js`**<br>fills a 16x16 LED matrix with a variety of colors and a linearly increasing intensity ranging from 0 to 1/16th of the potential maximum
+* **`Intensity-Test-non-linear-non-dimmed.js`**<br>fills a 16x16 LED matrix with a variety of colors and a quadratically increasing intensity ranging from 0 to maximum
+* **`Intensity-Test-non-linear-dimmed.js`**<br>fills a 16x16 LED matrix with a variety of colors and a quadratically increasing intensity ranging from 0 to 1/16th of the potential maximum
 
 ## License ##
 
