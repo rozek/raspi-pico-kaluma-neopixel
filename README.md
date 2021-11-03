@@ -16,7 +16,7 @@ This code uses the first of the "Serial Programming Interfaces" (SPI) the Raspi 
 
 From the possible signals an SPI provides, only "Master Out Slave In" (MOSI) is used. The Raspi Pico allows that signal to be routed to multiple output pins (but not to _any_ of them): in this example, pin 19 has been chosen - others may work as well, but you will have to test yourself.
 
-#### Connecting an LED Stripe ####
+#### Connecting a LED Stripe ####
 
 Sometimes, LED stripes (which assume to be powered with 5V) may be directly wired to the Raspi Pico output pin (which provides 3v3 levels only) but usually, such a connection does not work reliably and may produce wrong LED patterns from time to time.
 
@@ -34,7 +34,7 @@ The library directly supports linear stripes as well as matrices wired in zigzag
 
 The "library" consists of a single function `SPIDisplay` which should be invoked to setup a driver for a given MOSI pin and LED geometry: 
 
-* **`SPIDisplay (Pin, Width, Height)`**<br>prepares an internal display storage for a LED matrix with the given dimension (omit `Height` if you have a stripe only) which is connected to the given `Pin` (set `Pin` to `null` if you want to use the default)
+* **`SPIDisplay (Pin, Width, Height)`**<br>prepares an internal display storage for a LED matrix with the given dimension (omit `Height` if you have a linear stripe only) which is connected to the given `Pin` (set `Pin` to `null` if you want to use the default)
 
 The output of this function is an object containing a few methods which may be used to prepare a display and send it to the LED stripe.
 
