@@ -20,7 +20,7 @@ From the possible signals an SPI provides, only "Master Out Slave In" (MOSI) is 
 
 Sometimes, LED stripes (which assume to be powered with 5V) may be directly wired to the Raspi Pico output pin (which provides 3v3 levels only) but usually, such a connection does not work reliably and may produce wrong LED patterns from time to time.
 
-In such a case, a level shifter should be inserted between Raspi Pico and LED Stripe. This device does not have to be bidirectional but definitely must be fast since communication effectively runs with 800kHz. For that reason, a dedicated level shifting chip should be used (instead of the brilliant and, thus, widely used circuit consisting of a simple MOSFET and two resistors only). If it still has to be the latter one, you may try to "shorten" the MOSFET with a small ceramic capacitor (e.g., 22pF) but success is not guaranteed.
+In such a case, a level shifter should be inserted between Raspi Pico and LED Stripe. This device does not have to be bidirectional but definitely must be fast since communication effectively runs with 800kHz. For that reason, a dedicated level shifting chip should be used (instead of the brilliant and, thus, widely used circuit consisting of a simple MOSFET and two resistors only). If it still has to be the latter one, you may try to "short-circuit" the MOSFET with a small ceramic capacitor (e.g., 22pF) but success is not guaranteed.
 
 #### Memory Consumption ####
 
