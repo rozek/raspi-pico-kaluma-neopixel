@@ -46,6 +46,19 @@ The output of this function is an object containing a few methods which may be u
 
 ## Usage ##
 
+In the simplest case, the contents of file `SPIDisplay.js` may just be copied into the Kaluma Web IDE and your code added below:
+
+```
+// <<<< insert SPIDisplay.js here
+
+let Display = SPIDisplay(null, 16,16);
+  Display.clear();
+
+  Display.setPixelRGB(0,0, 16,0,0); // red
+  Display.setPixelRGB(2,0, 0,16,0); // green
+  Display.setPixelRGB(4,0, 0,0,16); // blue
+Display.show();
+```
 
 ## Tests and Examples ##
 
