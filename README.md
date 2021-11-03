@@ -41,7 +41,7 @@ The output of this function is an object containing a few methods which may be u
 * **`clear ()`**<br>fills the internal display storage with the SPI bit pattern for dark LEDs
 * **`setPixelRGB (x,y, R,G,B)`**<br>sets the LED at the given coordinate (`x = 0...Width-1, y = 0...Height-1`) to the given RGB values (`R = 0...255, G = 0...255, B = 0...255`)
 * **`setPixelHSL (x,y, H,S,L)`**<br>sets the LED at the given coordinate (`x = 0...Width-1, y = 0...Height-1`) to RGB values which correspond to the given "Hue" (`H = 0...1`), "Saturation" (`S = 0...1`) and "Luminosity" (`L = 0...1`) values. Internally, this method uses the same conversion as `HSLtoRGB` and has been provided for your convenience only
-* **`HSLtoRGB (H,S,L)`**<br>converts the given "Hue" (`H = 0...1`), "Saturation" (`S = 0...1`) and "Luminosity" (`L = 0...1`) values to corresponding RGB values (`R = 0...255, G = 0...255, B = 0...255`) and returns them as an array. The same conversion is also used by `setPixelHSL`, but has also been provided as a separate method in case that you want to process the resulting RGB values further
+* **`HSLtoRGB (H,S,L)`**<br>converts the given "Hue" (`H = 0...1`), "Saturation" (`S = 0...1`) and "Luminosity" (`L = 0...1`) values to corresponding RGB values (`R = 0...255, G = 0...255, B = 0...255`) and returns them as an array. The same conversion is also used by `setPixelHSL`, but has been provided as a separate method in case that you want to process the resulting RGB values further
 * **`show ()`**<br>sends the current contents of the internal display storage to the connected LED stripe
 
 ## Usage ##
