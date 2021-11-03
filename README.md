@@ -50,6 +50,7 @@ The output of this function is an object containing a few methods which may be u
 
 ## Examples ##
 
+All examples assume a 16x16 RGB LED matrix connected to Pin 19:
 
 ## License ##
 
