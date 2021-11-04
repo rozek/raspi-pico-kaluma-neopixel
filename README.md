@@ -64,6 +64,12 @@ Display.show();
 
 ## Tests and Examples ##
 
+The following image illustrates the expected wiring for the tests and examples that come with this driver.
+
+![](RasPi-Pico-with-Neopixel-Matrix_bb.png)
+
+Please note, that the shown Neopixel display geometry is just an example - please, consider the individual examples for their actually expected geometry.
+
 The following tests assume a LED string connected to Pin 19. Just copy them into your clipboard, paste them into the Kaluma Web IDE and "Upload":
 
 * **`RGB-Test.js`**<br>sets pixel 0 to red, pixel 2 to green, 4 to blue and pixel 10 to yellow, 12 to magenta, 14 to cyan
