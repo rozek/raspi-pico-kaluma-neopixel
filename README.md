@@ -71,10 +71,10 @@ The following tests assume a LED string connected to Pin 19. Just copy them into
 
 All examples assume a 16x16 RGB LED matrix connected to Pin 19. Just copy them into your clipboard, paste them into the Kaluma Web IDE and "Upload":
 
-* **`Intensity-Test-linear-non-dimmed.js`**<br>fills a 16x16 LED matrix with a variety of colors and a linearly increasing intensity ranging from 0 to maximum
-* **`Intensity-Test-linear-dimmed.js`**<br>fills a 16x16 LED matrix with a variety of colors and a linearly increasing intensity ranging from 0 to 1/16th of the potential maximum
-* **`Intensity-Test-non-linear-non-dimmed.js`**<br>fills a 16x16 LED matrix with a variety of colors and a quadratically increasing intensity ranging from 0 to maximum
-* **`Intensity-Test-non-linear-dimmed.js`**<br>fills a 16x16 LED matrix with a variety of colors and a quadratically increasing intensity ranging from 0 to 1/16th of the potential maximum
+* **`Intensity-Test-linear-non-dimmed.js`**<br>fills a 16x16 LED matrix with a variety of colors and a linearly increasing intensity ranging from 0 to maximum. Neopixel LEDs usually shine quite bright, perhaps too bright - try this example to see what I mean
+* **`Intensity-Test-linear-dimmed.js`**<br>fills a 16x16 LED matrix with a variety of colors and a linearly increasing intensity ranging from 0 to 1/16th of the potential maximum. This example is like the previous one, but does not exhaust the complete intensity range of Neopixel LEDs
+* **`Intensity-Test-non-linear-non-dimmed.js`**<br>fills a 16x16 LED matrix with a variety of colors and a quadratically increasing intensity ranging from 0 to maximum. Linearly increasing the RGB values of a Neopixel LED does not lead to a linearly increasing brightness - this example therefore uses quadratically increasing RGB values which seem to do a better job
+* **`Intensity-Test-non-linear-dimmed.js`**<br>fills a 16x16 LED matrix with a variety of colors and a quadratically increasing intensity ranging from 0 to 1/16th of the potential maximum. This example is like the previous one, but does not exhaust the complete intensity range of Neopixel LEDs
 
 ## License ##
 
