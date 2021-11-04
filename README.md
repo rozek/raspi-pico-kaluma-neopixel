@@ -14,7 +14,7 @@ This code uses the first of the "Serial Programming Interfaces" (SPI) the RasPi 
 
 #### MOSI only ####
 
-From the possible signals an SPI provides, only "Master Out Slave In" (MOSI) is used. The RasPi Pico allows that signal to be routed to multiple output pins (but not to _any_ of them): by default, pin GP3 wil be chosen - alternatively, you may also use pin GP19 instead if you modify the examples accordingly.
+From the possible signals an SPI provides, only "Master Out Slave In" (MOSI) is used. The RasPi Pico allows that signal to be routed to multiple output pins (but not to _any_ of them): by default, pin GP3 wil be used - alternatively, you may also choose pin GP19 if you modify the examples accordingly.
 
 #### Connecting a LED Stripe ####
 
