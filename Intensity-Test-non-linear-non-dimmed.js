@@ -1,7 +1,7 @@
 const {SPI} = require('spi');
 
 function SPIDisplay (Pin, Width, Height) {
-  if (Pin    == null) { Pin    = 19; }
+  if (Pin    == null) { Pin    = 3; }                  // GP19 will work as well
   if (Width  == null) { Width  = 1; }
   if (Height == null) { Height = 1; }
 
