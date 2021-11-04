@@ -16,7 +16,7 @@ This code uses the first of the "Serial Programming Interfaces" (SPI) the RasPi 
 
 From the possible signals an SPI provides, only "Master Out Slave In" (MOSI) is used. The RasPi Pico allows that signal to be routed to multiple output pins (but not to _any_ of them): by default, pin GP3 wil be used - alternatively, you may also choose pin GP19 if you modify the examples accordingly.
 
-> Nota bene: the [Pimoroni Tiny 2040](https://shop.pimoroni.com/products/tiny-2040) already uses pin GP19 for its own built-in RGB LED - thus, on such a device, the defaultpin  GP3 should be preferred.
+> Nota bene: the [Pimoroni Tiny 2040](https://shop.pimoroni.com/products/tiny-2040) already uses pin GP19 for its own built-in RGB LED - thus, on such a device, the default pin GP3 should be preferred.
 
 #### Connecting a LED Stripe ####
 
