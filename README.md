@@ -64,7 +64,7 @@ Display.show();
 
 ## Tests and Examples ##
 
-The following image illustrates the expected wiring for the tests and examples that come with this driver.
+The following image illustrates the expected wiring (without level shifter) for the tests and examples that come with this driver.
 
 ![](RasPi-Pico-with-Neopixel-Matrix_bb.png)
 
