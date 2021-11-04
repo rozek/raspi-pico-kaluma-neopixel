@@ -68,7 +68,7 @@ The following image illustrates the expected wiring (without level shifter) for 
 
 ![](RasPi-Pico-with-Neopixel-Matrix_bb.png)
 
-Please note, that the shown Neopixel display geometry is just an example - please, consider the individual examples for their actually expected geometry.
+Please note, that the shown Neopixel display is just an example - please, consider the individual examples for their actually expected LED geometry.
 
 The following tests assume a LED string connected to Pin 19. Just copy them into your clipboard, paste them into the Kaluma Web IDE and "Upload":
 
