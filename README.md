@@ -50,7 +50,7 @@ The output of this function is an object containing a few methods which may be u
 
 In the simplest case, the contents of file `SPIDisplay.js` may just be copied into the Kaluma Web IDE and your code added below:
 
-```
+```javascript
 // <<<< insert SPIDisplay.js here
 
 let Display = SPIDisplay(null, 16,16);
